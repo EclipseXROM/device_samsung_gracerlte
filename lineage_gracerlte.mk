@@ -40,3 +40,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="gracerltexx-user 9 PPR1.180610.011 N935FXXU6CSK1 release-keys"
 
 BUILD_FINGERPRINT := samsung/gracerltexx/gracerlte:9/PPR1.180610.011/N935FXXU6CSK1:user/release-keys
+
+# EclipseX common product layer (first-party suite, EclipseX Home, debloat).
+# -if-exists so this file also parses before `repo sync` pulls common.
+$(call inherit-product-if-exists, vendor/eclipsex/common/eclipsex.mk)
